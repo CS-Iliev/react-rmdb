@@ -12,8 +12,8 @@ const SearchBar = ({ setSearchTerm }) => {
     const initial = useRef(true);
 
     useEffect(() => {
-        
-        if(initial.current) {
+
+        if (initial.current) {
             initial.current = false;
             return;
         }
@@ -29,15 +29,17 @@ const SearchBar = ({ setSearchTerm }) => {
         <Wrapper>
             <Content>
                 <img src={searchIcon} alt='search-icon' />
-                <input 
-                type='text' 
-                placeholder='Search Movie'
-                onChange={event => setState(event.currentTarget.value)}
-                value={state}
-            />
+                <input
+                    type='text'
+                    placeholder='Search Movie'
+                    onChange={event => setState(event.currentTarget.value)}
+                    value={state}
+                />
             </Content>
         </Wrapper>
     );
 }
+
+// unnecessary comment
 
 export default SearchBar;
