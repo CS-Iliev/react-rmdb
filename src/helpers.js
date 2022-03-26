@@ -24,7 +24,7 @@ export const isPersistedState = stateName =>
 
 export const filterTrailerURL = (movie) =>
 {
-  const trailer = movie.videos['results'].filter((e) => { return /.*[Tt]railer.*/.test(e['name']) });
+  const trailer = movie.videos['results'].filter((e) => { return e['type'] == 'Trailer' });
 
   const YOUTUBE_URL = 'https://www.youtube.com/embed/';
 
