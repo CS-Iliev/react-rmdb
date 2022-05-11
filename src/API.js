@@ -1,13 +1,13 @@
 import
-  {
-    SEARCH_BASE_URL,
-    POPULAR_BASE_URL,
-    API_URL,
-    API_KEY,
-    REQUEST_TOKEN_URL,
-    LOGIN_URL,
-    SESSION_ID_URL
-  } from './config';
+{
+  SEARCH_BASE_URL,
+  POPULAR_BASE_URL,
+  API_URL,
+  API_KEY,
+  REQUEST_TOKEN_URL,
+  LOGIN_URL,
+  SESSION_ID_URL
+} from './config';
 
 const defaultConfig = {
   method: 'POST',
@@ -21,7 +21,7 @@ const apiSettings = {
   {
     const endpoint = searchTerm
       ? `${SEARCH_BASE_URL}${searchTerm}&page=${page}`
-      : `${POPULAR_BASE_URL}&page=${page}`;
+      : `${POPULAR_BASE_URL}&page=${page}&with_original_language=bg`;
     return await (await fetch(endpoint)).json();
   },
   fetchMovie: async movieId =>
