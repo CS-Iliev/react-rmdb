@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
 
-const Rate = ({ callback }) => {
+import Button from '../Button';
+
+//Styles
+import { Wrapper } from './Rate.styles';
+
+const Rate = ({ callback }) =>
+{
     const [value, setValue] = useState(5);
 
     return (
-        <div>
-            <input 
+        <Wrapper>
+            <input
                 type='range'
                 min='1'
                 max='10'
                 value={value}
                 onChange={e => setValue(e.currentTarget.value)}
             />
-            {value}
-            <p>
-                <button onClick={() => callback(value)}>Rate</button>
-            </p>
-        </div>
+
+            <Button text={"Rate " + value.toString()} callback={() => callback(value)} />
+        </Wrapper>
     );
 };
 

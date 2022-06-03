@@ -4,6 +4,7 @@ import API from '../../API';
 //Components
 import Thumb from "../Thumb";
 import Rate from "../Rate";
+import Button from "../Button";
 
 //Config
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
@@ -58,8 +59,8 @@ const MovieInfo = ({ movie, trailer }) =>
                             </div>
                             {user && (
                                 <div>
-                                    <p>Rate Movie</p>
                                     <Rate callback={handleRating} />
+                                    <Button text="Add to Watchlist" />
                                 </div>
                             )}
                         </div>

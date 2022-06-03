@@ -11,7 +11,8 @@ import { Wrapper } from './Login.styles';
 //Context
 import { Context } from '../context'
 
-const Login = () => {
+const Login = () =>
+{
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -20,25 +21,26 @@ const Login = () => {
     const [_user, setUser] = useContext(Context);
     const navigate = useNavigate();
 
-    const handleInput = e => {
+    const handleInput = e =>
+    {
         const name = e.currentTarget.name;
         const value = e.currentTarget.value;
 
-        if(name === 'username') setUsername(value);
-        if(name === 'password') setPassword(value);
+        if (name === 'username') setUsername(value);
+        if (name === 'password') setPassword(value);
     };
 
-    const handleSubmit = async () => {
+    const handleSubmit = async () =>
+    {
         setError(false);
-        try {
+        try
+        {
             const requestToken = await API.getRequestToken();
             const sessionId = await API.authenticate(
                 requestToken,
                 username,
                 password
             );
-
-            //console.log(sessionId);
 
             setUser({ sessionId: sessionId.session_id, username });
 
@@ -53,12 +55,16 @@ const Login = () => {
         <Wrapper>
             {error && <div className='error'>There was an error!</div>}
             <label>Username:</label>
+
             <input
                 type='text'
                 value={username}
                 name='username'
                 onChange={handleInput}
             />
+
+            <label>Password:</label>
+
             <input
                 type='password'
                 value={password}
@@ -66,6 +72,7 @@ const Login = () => {
                 onChange={handleInput}
             />
             <Button text='Login' callback={handleSubmit} />
+
         </Wrapper>
     );
 }
