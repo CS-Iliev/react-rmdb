@@ -5,6 +5,8 @@ import RMDBLogo from '../../images/react-movie-logo.svg';
 
 import { Wrapper, Content, LogoImg, TMDBLogoImg } from './Header.styles';
 
+import Navbarmenu from "../Navbarmenu";
+
 //Context
 import { Context } from '../../context';
 
@@ -21,7 +23,9 @@ const Header = () =>
                 </Link>
                 {
                     user ? (
-                        <span className='loggedin'>Logged in as: {user.username}</span>
+                        //<span className='loggedin'>Logged in as: {user.username}</span>
+                        <Navbarmenu
+                            user={user.username} />
                     ) : (
                         <Link to='login'>
                             <span className='login'>Log in</span>
