@@ -60,7 +60,7 @@ const MovieInfo = ({ movie, trailer }) =>
                             {user && (
                                 <div>
                                     <Rate callback={handleRating} />
-                                    <Button text="Add to Watchlist" />
+                                    <div class="watchlist-button"><Button text="Add to Watchlist" /></div>
                                 </div>
                             )}
                         </div>

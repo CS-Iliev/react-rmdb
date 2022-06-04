@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.button`
-    display: block;
+    display: inline;
     background: var(--darkGrey);
     width: 25%;
     min-width: 200px;

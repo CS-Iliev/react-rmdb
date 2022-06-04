@@ -28,6 +28,10 @@ export const Content = styled.div`
     background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
 
+    .watchlist-button{
+        margin-left: 20px;
+    }
+
     @media screen and (max-width: 768px) {
         display: block;
         max-height: none;
