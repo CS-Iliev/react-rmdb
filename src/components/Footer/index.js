@@ -9,7 +9,6 @@ const Footer = () =>
     return (
         <Wrapper>
             <Content>
-                <a href="https://github.com/cs-iliev/react-rmdb" target="_blank">https://github.com/cs-iliev/react-rmdb</a>
                 <TMDBLogoImg src={TMDBLogo} alt='tmdb-logo' />
             </Content>
         </Wrapper>

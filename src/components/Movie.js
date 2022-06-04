@@ -12,6 +12,8 @@ import MovieInfo from "./MovieInfo";
 import MovieInfoBar from "./MovieInfoBar";
 import Actor from './Actor';
 
+import MapSection from './Map/Map' // import the map here
+
 //Hook
 import { useMovieFetch } from '../Hooks/useMovieFetch';
 
@@ -33,6 +35,12 @@ const Movie = () =>
 
     const trailerURL = filterTrailerURL(movie);
 
+    const location = {
+        address: 'Paradise Center, Blvd "Cherni Vryh", Sofia.',
+        lat: 42.65872,
+        lng: 23.31569,
+    }
+
     return (
         <>
             <BreadCrumb movieTitle={movie.original_title} />
@@ -52,6 +60,7 @@ const Movie = () =>
                     />
                 ))}
             </Grid>
+            <MapSection location={location} zoomLevel={17} />
         </>
     );
 }
