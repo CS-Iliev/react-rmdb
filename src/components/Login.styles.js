@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     margin: 0 auto;
  
     max-width: 320px;
-    height: 80vh;
+    height: 75vh;
     padding: 20px;
     color: var(--darkGrey);
 

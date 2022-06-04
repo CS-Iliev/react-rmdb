@@ -75,7 +75,7 @@ li {
   margin: 27px 17px;
   text-decoration: none;
   cursor: pointer;
-  width: 200px;
+  width: 220px;
 }
 .header__middle__logo{
   width: 20%;
